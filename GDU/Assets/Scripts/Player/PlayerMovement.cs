@@ -55,8 +55,9 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        _jumpLeft = jumpAmount;
+        if (collision.gameObject.CompareTag("Floor"))  _jumpLeft = jumpAmount;
+        else if (collision.gameObject.CompareTag("Wall"))  _jumpLeft = jumpAmount;
     }
 }
