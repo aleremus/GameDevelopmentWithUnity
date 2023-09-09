@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Vector3 Position => transform.position;
     private int _currentHealth;
     [SerializeField] int maxHP;
     [SerializeField] float randomEventInterval = 2;
