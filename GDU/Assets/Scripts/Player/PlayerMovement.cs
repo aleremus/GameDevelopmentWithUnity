@@ -60,4 +60,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))  _jumpLeft = jumpAmount;
         else if (collision.gameObject.CompareTag("Wall"))  _jumpLeft = jumpAmount;
     }
+    
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))  _jumpLeft = jumpAmount - 1;
+        else if (collision.gameObject.CompareTag("Wall"))  _jumpLeft = jumpAmount - 1;
+    }
+
+
 }

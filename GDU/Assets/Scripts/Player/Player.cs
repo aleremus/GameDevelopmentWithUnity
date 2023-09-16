@@ -18,11 +18,6 @@ public class Player : MonoBehaviour
         _currentHealth = maxHP;
         StartCoroutine(RandomEvent());
     }
-    void Update()
-    {
-        
-    }
-
     IEnumerator RandomEvent()
     {
         while (_currentHealth > 0)
